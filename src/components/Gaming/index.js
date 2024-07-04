@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {SiYoutubegaming} from 'react-icons/si'
 import Loader from 'react-loader-spinner'

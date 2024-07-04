@@ -67,14 +67,8 @@ export default class Login extends Component {
   }
 
   render() {
-    const {
-      username,
-      password,
-      errorMsg,
-      showErrorMsg,
-      showPassword,
-      isDark,
-    } = this.state
+    const {username, password, errorMsg, showErrorMsg, showPassword, isDark} =
+      this.state
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
       return <Redirect to="/" />

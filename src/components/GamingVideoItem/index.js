@@ -1,6 +1,4 @@
 import {Link} from 'react-router-dom'
-import {formatDistanceToNow} from 'date-fns'
-import {BsDot} from 'react-icons/bs'
 import DarkModeContext from '../../context/DarkModeContext'
 import {
   VideoItemContainer,
