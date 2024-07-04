@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.video-item-link {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.nav-link,
+.trending-video-item-link {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.gaming-video-item-link {
+  display: flex;
+}
