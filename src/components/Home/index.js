@@ -199,44 +199,46 @@ export default class Home extends Component {
   }
 
   render() {
+    const {showBanner} = this.state
     return (
       <DarkMode.Consumer>
         {value => {
-          const {isDarkMode, searchValue, showBanner} = value
+          const {isDarkMode, searchValue} = value
+          console.log(showBanner)
           return (
             <>
               <Header />
               <>
                 <Sidebar />
                 <HomeContainer isDarkMode={isDarkMode} data-testid="home">
-                  <BannerContainer data-testid="banner">
-                    <BannerHeader>
-                      <CloseBtn type="button" data-testid="close">
-                        <IoClose
-                          onClick={this.handleClose}
-                          style={{
-                            cursor: 'pointer',
-                            alignSelf: 'flex-end',
-                            fontSize: '1.5rem',
-                          }}
-                        />
-                      </CloseBtn>
-                    </BannerHeader>
-                    <BannerBody>
-                      <LogoAndDescriptionContainer>
-                        <WebsiteLogo
-                          src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-                          alt="nxt watch logo"
-                        />
-                        {showBanner && (
+                  {showBanner && (
+                    <BannerContainer data-testid="banner">
+                      <BannerHeader>
+                        <CloseBtn type="button" data-testid="close">
+                          <IoClose
+                            onClick={this.handleClose}
+                            style={{
+                              cursor: 'pointer',
+                              alignSelf: 'flex-end',
+                              fontSize: '1.5rem',
+                            }}
+                          />
+                        </CloseBtn>
+                      </BannerHeader>
+                      <BannerBody>
+                        <LogoAndDescriptionContainer>
+                          <WebsiteLogo
+                            src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                            alt="nxt watch logo"
+                          />
                           <PremiumPlansDescription>
                             Buy Nxt Watch Premium prepaid plans with UPI
                           </PremiumPlansDescription>
-                        )}
-                      </LogoAndDescriptionContainer>
-                      <GetItNowBtn type="button">GET IT NOW</GetItNowBtn>
-                    </BannerBody>
-                  </BannerContainer>
+                        </LogoAndDescriptionContainer>
+                        <GetItNowBtn type="button">GET IT NOW</GetItNowBtn>
+                      </BannerBody>
+                    </BannerContainer>
+                  )}
                   <VideoSearchInputContainer>
                     <SearchInput
                       name="search input"
