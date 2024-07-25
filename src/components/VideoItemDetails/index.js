@@ -223,7 +223,7 @@ export default class VideoItemDetails extends Component {
       <FailureViewImageContainer>
         <FailureViewImage
           src={
-            isDarkMode
+            !isDarkMode
               ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-light-theme-img.png'
               : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-dark-theme-img.png'
           }
